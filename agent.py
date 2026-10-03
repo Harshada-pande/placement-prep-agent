@@ -1,11 +1,12 @@
-from langchain_ollama import ChatOllama
+from langchain_groq import ChatGroq
 from langchain.agents import create_agent
 
 from tools import get_dsa_topics, get_company_topics
 
 
-model = ChatOllama(
-    model="llama3.2"
+model = ChatGroq(
+    model="llama-3.3-70b-versatile",
+    temperature=0
 )
 
 tools = [
